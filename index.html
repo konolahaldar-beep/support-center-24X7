@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasty Home Recipes</title>
+  <meta name="description" content="Discover delicious homemade recipes including pasta, pancakes, grilled chicken, and smoothies." />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ff7043;
+      color: white;
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: bold;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 22px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .recipes {
+      padding: 70px 5%;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 40px;
+      margin-bottom: 50px;
+      color: #ff7043;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .recipe-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .recipe-content {
+      padding: 25px;
+    }
+
+    .recipe-content h3 {
+      margin-bottom: 15px;
+      color: #ff7043;
+      font-size: 28px;
+    }
+
+    .recipe-content ul {
+      margin: 15px 0 20px 20px;
+    }
+
+    .recipe-content p {
+      color: #555;
+    }
+
+    .about {
+      background: white;
+      padding: 70px 5%;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      color: #ff7043;
+    }
+
+    .about p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      color: #555;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    @media(max-width:768px) {
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🍴 Tasty Recipes</div>
+
+  <nav>
+    <a href="#recipes">Recipes</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Easy & Delicious Homemade Recipes</h1>
+
+  <p>
+    Explore quick, healthy, and mouth-watering recipes you can make at home with simple ingredients.
+  </p>
+</section>
+
+<section class="recipes" id="recipes">
+  <h2 class="section-title">Featured Recipes</h2>
+
+  <div class="recipe-grid">
+
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?q=80&w=1200&auto=format&fit=crop" alt="Creamy Pasta" />
+
+      <div class="recipe-content">
+        <h3>Creamy Garlic Pasta</h3>
+
+        <p><strong>Ingredients:</strong></p>
+
+        <ul>
+          <li>Pasta</li>
+          <li>Garlic</li>
+          <li>Butter</li>
+          <li>Fresh Cream</li>
+          <li>Parmesan Cheese</li>
+        </ul>
+
+        <p>
+          Cook pasta until tender. Prepare a creamy garlic sauce using butter, garlic, and cream. Mix everything together and top with parmesan cheese.
+        </p>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?q=80&w=1200&auto=format&fit=crop" alt="Pancakes" />
+
+      <div class="recipe-content">
+        <h3>Fluffy Pancakes</h3>
+
+        <p><strong>Ingredients:</strong></p>
+
+        <ul>
+          <li>Flour</li>
+          <li>Milk</li>
+          <li>Eggs</li>
+          <li>Sugar</li>
+          <li>Baking Powder</li>
+        </ul>
+
+        <p>
+          Mix all ingredients into a smooth batter. Cook on a hot pan until golden brown and serve with honey or maple syrup.
+        </p>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1200&auto=format&fit=crop" alt="Grilled Chicken" />
+
+      <div class="recipe-content">
+        <h3>Grilled Chicken Bowl</h3>
+
+        <p><strong>Ingredients:</strong></p>
+
+        <ul>
+          <li>Chicken Breast</li>
+          <li>Rice</li>
+          <li>Mixed Vegetables</li>
+          <li>Olive Oil</li>
+          <li>Seasoning</li>
+        </ul>
+
+        <p>
+          Grill seasoned chicken until juicy and serve over rice with fresh vegetables for a healthy meal.
+        </p>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?q=80&w=1200&auto=format&fit=crop" alt="Smoothie" />
+
+      <div class="recipe-content">
+        <h3>Berry Banana Smoothie</h3>
+
+        <p><strong>Ingredients:</strong></p>
+
+        <ul>
+          <li>Banana</li>
+          <li>Mixed Berries</li>
+          <li>Milk</li>
+          <li>Honey</li>
+          <li>Ice Cubes</li>
+        </ul>
+
+        <p>
+          Blend all ingredients until smooth and creamy. Perfect for breakfast or post-workout refreshment.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <h2>About This Site</h2>
+
+  <p>
+    Tasty Recipes is a food blog created for home cooks, food lovers, and beginners looking for simple and delicious recipes. Our goal is to make cooking enjoyable with easy-to-follow recipes using everyday ingredients. Whether you are preparing breakfast, lunch, dinner, or healthy snacks, our recipes are designed to save time while delivering amazing taste.
+  </p>
+
+  <br><br>
+
+  <p>
+    Every recipe on this website includes easy instructions, ingredient lists, and practical cooking tips. We focus on homemade meals that are budget-friendly, beginner-friendly, and perfect for families, students, and busy professionals.
+  </p>
+</section>
+
+<section class="recipes">
+  <h2 class="section-title">Cooking Tips & Kitchen Hacks</h2>
+
+  <div class="recipe-grid">
+
+    <div class="recipe-card">
+      <div class="recipe-content">
+        <h3>How to Cook Pasta Perfectly</h3>
+
+        <p>
+          Always use enough water when boiling pasta and add salt before cooking. Stir occasionally to prevent sticking and avoid overcooking to maintain the perfect texture.
+        </p>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <div class="recipe-content">
+        <h3>Healthy Breakfast Ideas</h3>
+
+        <p>
+          A healthy breakfast can include smoothies, oats, eggs, fruits, and yogurt. Eating a balanced breakfast helps improve energy levels and concentration throughout the day.
+        </p>
+      </div>
+    </div>
+
+    <div class="recipe-card">
+      <div class="recipe-content">
+        <h3>Best Ingredients for Quick Meals</h3>
+
+        <p>
+          Keep ingredients like pasta, rice, frozen vegetables, eggs, and spices in your kitchen for fast and convenient homemade meals.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="background:white;">
+  <h2 class="section-title">Frequently Asked Questions</h2>
+
+  <div style="max-width:1000px;margin:auto;display:grid;gap:25px;">
+
+    <div style="background:#faf7f2;padding:25px;border-radius:14px;">
+      <h3 style="margin-bottom:10px;color:#ff7043;">Are these recipes beginner friendly?</h3>
+
+      <p>
+        Yes, all recipes on this website are written for beginners and home cooks with simple step-by-step instructions.
+      </p>
+    </div>
+
+    <div style="background:#faf7f2;padding:25px;border-radius:14px;">
+      <h3 style="margin-bottom:10px;color:#ff7043;">Can I prepare these meals quickly?</h3>
+
+      <p>
+        Most recipes can be prepared in under 30 minutes using commonly available ingredients.
+      </p>
+    </div>
+
+    <div style="background:#faf7f2;padding:25px;border-radius:14px;">
+      <h3 style="margin-bottom:10px;color:#ff7043;">Do you share healthy recipes?</h3>
+
+      <p>
+        Yes, we regularly include healthy meal ideas such as smoothies, grilled dishes, and balanced homemade foods.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" style="background:#fff3ed;text-align:center;">
+  <h2 class="section-title">Why People Love Homemade Food</h2>
+
+  <p style="max-width:1000px;margin:auto;font-size:18px;color:#555;line-height:1.9;">
+    Homemade meals are healthier, more affordable, and customizable according to your taste preferences. Cooking at home also helps families spend quality time together while enjoying fresh and nutritious meals. From quick breakfasts to delicious dinners, homemade recipes provide comfort, flavor, and creativity in everyday cooking.
+  </p>
+</section>
+
+<footer>
+  © 2026 Tasty Recipes. All Rights Reserved.
+</footer>
+  © 2026 Tasty Recipes. All Rights Reserved.
+</footer>
+
+</body>
+</html>
